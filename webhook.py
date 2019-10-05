@@ -80,57 +80,7 @@ class GroupAccessHandler(RequestHandler):
                 print 'username is already in group'
 
 
-# # TODO- deprecate these once the general handler is working. Will also need
-# # to edit the typeforms.
-#
-# class QualifiedHandler(GroupAccessHandler):
-#     def __init__(self, data):
-#         GroupAccessHandler.__init__(self, data)
-#         self.group_name = 'QualifiedPurchasers'
-#
-# class ParabellumHandler(GroupAccessHandler):
-#     def __init__(self, data):
-#         GroupAccessHandler.__init__(self, data)
-#         self.group_name = 'Parabellum'
-#
-# class PraxisHandler(GroupAccessHandler):
-#     def __init__(self, data):
-#         GroupAccessHandler.__init__(self, data)
-#         self.group_name = 'Praxis'
-#
-#
-#
-# @app.route('/qualified', methods=['GET', 'POST'])
-# def qualified():
-#     if request.method == 'POST':
-#         data = request.json
-#         q = QualifiedHandler(data)
-#         q.process()
-#         return '', 200
-#     else:
-#         return '', 400
-#
-#
-# @app.route('/parabellum', methods=['GET', 'POST'])
-# def parabellum():
-#     if request.method == 'POST':
-#         data = request.json
-#         q = ParabellumHandler(data)
-#         q.process()
-#         return '', 200
-#     else:
-#         return '', 400
-#
-# @app.route('/praxis', methods=['GET', 'POST'])
-# def praxis():
-#     if request.method == 'POST':
-#         data = request.json
-#         q = PraxisHandler(data)
-#         q.process()
-#         return '', 200
-#     else:
-#         return '', 400
-#
+# groupname must be the name, not "full name", of the group.
 
 @app.route('/<groupname>', methods=['GET', 'POST'])
 def handler(groupname):

@@ -5,8 +5,8 @@ A flask server to handle webhooks from Typeform.
 from flask import Flask, render_template, flash, request
 import logging
 from pprint import pprint
-from crawl.client506 import create_client
-from emails.boto506 import send_simple_email
+from client506 import create_client
+from boto506 import send_simple_email
 from pydiscourse.exceptions import (
     DiscourseClientError
 )

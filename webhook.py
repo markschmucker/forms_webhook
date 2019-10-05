@@ -6,7 +6,7 @@ from flask import Flask, render_template, flash, request
 import logging
 from pprint import pprint
 from client506 import create_client
-from boto506 import send_simple_email
+from ses import send_simple_email
 from pydiscourse.exceptions import (
     DiscourseClientError
 )

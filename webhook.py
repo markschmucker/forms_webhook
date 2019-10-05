@@ -144,17 +144,6 @@ def handler(groupname):
         return '', 400
 
 
-@app.route('/<groupname>', methods=['GET', 'POST'])
-def handler(groupname):
-    if request.method == 'POST':
-        data = request.json
-        q = GroupAccessHandler(data)
-        q.group_name = groupname
-        q.process()
-        return '', 200
-    else:
-        return '', 400
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, debug=True, threaded=True)

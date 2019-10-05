@@ -135,6 +135,7 @@ def praxis():
 @app.route('/<groupname>', methods=['GET', 'POST'])
 def handler(groupname):
     if request.method == 'POST':
+        print 'got request to join group: ', groupname
         data = request.json
         q = GroupAccessHandler(data)
         q.group_name = groupname

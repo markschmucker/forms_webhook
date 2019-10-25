@@ -4,3 +4,5 @@ This provides a webhook which Typeforms can call. It parses the username and req
 To run it:
 
 > nohup python webhook.py &
+
+Port 8082 must be open
